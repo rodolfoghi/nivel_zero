@@ -1,0 +1,42 @@
+<%= form_with(model: ncm, html: { contents: true }) do |form| %>
+  <% if ncm.errors.any? %>
+    <div class="alert alert--negative flex flex-col gap-half mbe-4" role="alert">
+      <h2 class="font-medium leading-none"><%= pluralize(ncm.errors.count, "error") %> prohibited this ncm from being saved:</h2>
+
+      <ul class="text-sm mis-3" style="list-style: disc">
+        <% ncm.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="flex flex-col gap-half mbe-4">
+    <%= form.label :codigo, class: "text-sm font-medium leading-none" %>
+    <%= form.text_field :codigo, class: "input" %>
+  </div>
+
+  <div class="flex flex-col gap-half mbe-4">
+    <%= form.label :descricao, class: "text-sm font-medium leading-none" %>
+    <%= form.text_field :descricao, class: "input" %>
+  </div>
+
+  <div class="flex flex-col gap-half mbe-4">
+    <%= form.label :excecao, class: "text-sm font-medium leading-none" %>
+    <%= form.text_field :excecao, class: "input" %>
+  </div>
+
+  <div class="flex flex-col gap-half mbe-4">
+    <%= form.label :ativa, class: "text-sm font-medium leading-none" %>
+    <%= form.checkbox :ativa, class: "switch" %>
+  </div>
+
+  <div class="flex flex-col gap-half mbe-4">
+    <%= form.label :cest, class: "text-sm font-medium leading-none" %>
+    <%= form.text_field :cest, class: "input" %>
+  </div>
+
+  <div class="inline-flex items-center mbs-2 mie-1">
+    <%= form.submit class: "btn btn--primary" %>
+  </div>
+<% end %>
