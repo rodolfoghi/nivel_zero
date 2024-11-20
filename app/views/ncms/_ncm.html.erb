@@ -1,22 +1,27 @@
 <div id="<%= dom_id ncm %>" class="flex flex-col gap">
   <div class="flex flex-col gap-half">
-    <h4 class="font-medium leading-none">Codigo:</h4>
+    <h4 class="font-medium leading-none">Código:</h4>
     <p class="leading-none"><%= ncm.codigo %></p>
   </div>
   <div class="flex flex-col gap-half">
-    <h4 class="font-medium leading-none">Descricao:</h4>
+    <h4 class="font-medium leading-none">Descrição:</h4>
     <p class="leading-none"><%= ncm.descricao %></p>
   </div>
-  <div class="flex flex-col gap-half">
-    <h4 class="font-medium leading-none">Excecao:</h4>
-    <p class="leading-none"><%= ncm.excecao %></p>
-  </div>
-  <div class="flex flex-col gap-half">
-    <h4 class="font-medium leading-none">Ativa:</h4>
-    <p class="leading-none"><%= ncm.ativa %></p>
-  </div>
-  <div class="flex flex-col gap-half">
-    <h4 class="font-medium leading-none">Cest:</h4>
-    <p class="leading-none"><%= ncm.cest %></p>
-  </div>
+
+  <details>
+    <summary>Outros campos</summary>
+
+    <div class="flex flex-col gap-half">
+      <h4 class="font-medium leading-none">Exceção:</h4>
+      <p class="leading-none"><%= ncm.excecao %></p>
+    </div>
+    <div class="flex flex-col gap-half">
+      <h4 class="font-medium leading-none">Ativa:</h4>
+      <p class="leading-none"><%= ncm.ativa %></p>
+    </div>
+    <div class="flex flex-col gap-half">
+      <h4 class="font-medium leading-none">CEST:</h4>
+      <p class="leading-none"><%= ncm.cest %></p>
+    </div>
+  </details>
 </div>
