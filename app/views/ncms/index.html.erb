@@ -1,12 +1,19 @@
 <% if notice.present? %>
-  <div popover class="flash" style="--flash-position: 5rem;" data-controller="element-removal" data-action="animationend->element-removal#remove" role="alert"><%= notice %></div>
+  <div
+    popover
+    class="flash"
+    style="--flash-position: 5rem;"
+    data-controller="element-removal"
+    data-action="animationend->element-removal#remove"
+    role="alert"
+  ><%= notice %></div>
 <% end %>
 
-<% content_for :title, "Ncms" %>
+<% content_for :title, "NCMs" %>
 
 <div class="flex items-center justify-between mbe-4">
-  <h1 class="font-bold text-4xl">Ncms</h1>
-  <%= link_to "New ncm", new_ncm_path, class: "btn btn--primary" %>
+  <h1 class="font-bold text-4xl">NCMs</h1>
+  <%= link_to "Nova NCM", new_ncm_path, class: "btn btn--primary" %>
 </div>
 
 <div id="ncms" class="flex flex-col" style="gap: 2rem;">
