@@ -7,19 +7,19 @@ class NcmsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit ncms_url
-    assert_selector "h1", text: "Ncms"
+    assert_selector "h1", text: "NCMs"
   end
 
   test "should create ncm" do
     visit ncms_url
-    click_on "New ncm"
+    click_on "Nova NCM"
 
     check "Ativa" if @ncm.ativa
-    fill_in "Cest", with: @ncm.cest
-    fill_in "Codigo", with: @ncm.codigo
-    fill_in "Descricao", with: @ncm.descricao
-    fill_in "Excecao", with: @ncm.excecao
-    click_on "Create Ncm"
+    fill_in "CEST", with: @ncm.cest
+    fill_in "Código", with: @ncm.codigo
+    fill_in "Descrição", with: @ncm.descricao
+    fill_in "Exceção", with: @ncm.excecao
+    click_on "Criar NCM"
 
     assert_text "Ncm was successfully created"
     click_on "Back"
@@ -30,11 +30,11 @@ class NcmsTest < ApplicationSystemTestCase
     click_on "Edit this ncm", match: :first
 
     check "Ativa" if @ncm.ativa
-    fill_in "Cest", with: @ncm.cest
-    fill_in "Codigo", with: @ncm.codigo
-    fill_in "Descricao", with: @ncm.descricao
-    fill_in "Excecao", with: @ncm.excecao
-    click_on "Update Ncm"
+    fill_in "CEST", with: @ncm.cest
+    fill_in "Código", with: @ncm.codigo
+    fill_in "Descrição", with: @ncm.descricao
+    fill_in "Exceção", with: @ncm.excecao
+    click_on "Atualizar NCM"
 
     assert_text "Ncm was successfully updated"
     click_on "Back"
